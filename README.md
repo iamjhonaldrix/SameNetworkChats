@@ -1,39 +1,41 @@
-📡 SameNetworkChats
+SAME NETWORK CHATS
 
 A lightweight LAN-based real-time chat system built with Python sockets and threading.
 Supports password-protected server access, username handling, and multi-client messaging on the same network.
 
-🚀 Features
-🔐 Password-protected server login
-💬 Real-time group chat (LAN / same network)
-👥 Multi-client support using threads
-🧠 Username system for identity
-🚫 IP validation on client side
-⚡ Lightweight socket-based communication (no frameworks needed)
-🛠️ Technologies Used
+FEATURES
+
+- Password-protected server login
+- Real-time group chat over LAN (same network)
+- Multi-client support using threading
+- Username system for user identity
+- IP address validation on client side
+- Lightweight socket-based communication (no external frameworks)
+
+TECHNOLOGIES USED
 Python 3
 socket (networking)
-threading (multi-client support)
+threading (multi-client handling)
 re (IP validation)
-📁 Project Structure
+PROJECT STRUCTURE
 SameNetworkChats/
 │
-├── main.py        # Server + Client chat system
+├── main.py        # Server and client chat system
 ├── README.md      # Project documentation
-⚙️ How It Works
-🖥️ Server
+HOW IT WORKS
+SERVER
 Starts a TCP socket server
-Requires a password before allowing access
-Accepts multiple client connections
+Requires a password before allowing connections
+Accepts multiple clients using threads
 Broadcasts messages to all connected users
-💻 Client
+CLIENT
 Connects using server IP
-Validates IP format
+Validates IP format before connection
 Enters password to join server
 Chooses username
-Sends/receives messages in real time
-▶️ How to Run
-1. Start the Server
+Sends and receives messages in real time
+HOW TO RUN
+1. START SERVER
 python main.py
 
 Select:
@@ -42,9 +44,9 @@ Select:
 
 Set a password when prompted.
 
-2. Join as Client
+2. JOIN AS CLIENT
 
-Run the same file on another device:
+Run the same program on another device:
 
 python main.py
 
@@ -54,36 +56,36 @@ Select:
 
 Then enter:
 
-Server IP
+Server IP address
 Password
 Username
-🌐 Example Flow
-Server:
+EXAMPLE FLOW
+SERVER OUTPUT
 [SYSTEM] Listening on 5000...
 [CONNECT] ('192.168.1.5', 54321) joined network
-Client:
+CLIENT OUTPUT
 SERVER IP > 192.168.1.5
 Password: *****
 USERNAME > John
 CONNECTED TO ALLHOME CHAT
-⚠️ Notes
-Works only on same network (LAN/WiFi)
-Firewall may block port 5000
-Use correct server IP (not localhost if connecting from another device)
-🔧 Future Improvements
+NOTES
+Works only on the same network (LAN/WiFi)
+Port 5000 must be open on firewall
+Use correct server IP for connection
+FUTURE IMPROVEMENTS
 Add private messaging (/msg)
-Add admin commands (/kick, /ban)
-Save chat logs
-GUI version (Tkinter / PyQt)
-🔐 Encryption layer for secure data transmission (planned future upgrade)
-🔐 Security Roadmap
+Add admin controls (/kick, /ban)
+Save chat logs locally
+GUI version using Tkinter or PyQt
+Planned: Encryption layer for secure data transmission to protect chat messages from interception
+SECURITY ROADMAP
 
-I am currently planning to improve this project by adding encryption for all transmitted data, making the chat system more secure and resistant to packet sniffing or unauthorized interception.
+Future updates will include encryption for all transmitted data, improving security and preventing packet sniffing or unauthorized message interception.
 
-👨‍💻 Author
+AUTHOR
 
-Developed by @iamjhonaldrix
+Developed by iamjhonaldrix
 
-📜 License
+LICENSE
 
-This project is for educational purposes.
+This project is for educational purposes only.
